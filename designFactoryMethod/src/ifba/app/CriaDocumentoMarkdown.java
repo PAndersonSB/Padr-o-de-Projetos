@@ -11,7 +11,7 @@ import ifba.elementos.markdown.RodapeMarkdown;
 
 public class CriaDocumentoMarkdown extends CriadorDocumento{
 	
-	public  String geraDocumentacao() {
+	public  CriaDocumentoMarkdown() {
 		Cabecalho cabecalho= new CabecalhoMarkdown();
 		cabecalho.setTitulo("Padroes de projeto");
 		cabecalho.setEmpresa("Insituto Federal da Bahia");
@@ -21,6 +21,9 @@ public class CriaDocumentoMarkdown extends CriadorDocumento{
 		
 		Rodape rodape= new RodapeMarkdown();
 		rodape.setData(new Date() );
+	}
+	
+	public  String geraDocumentacao() {
 		
 		return cabecalho.getOutput() + corpo.getOutput() + rodape.getOutput();
 	}

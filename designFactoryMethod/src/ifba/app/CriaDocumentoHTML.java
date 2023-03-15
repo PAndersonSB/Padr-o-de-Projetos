@@ -11,7 +11,7 @@ import ifba.elementos.html.RodapeHTML;
 
 public class CriaDocumentoHTML extends CriadorDocumento{
 	
-	public  String geraDocumentacao() {
+	public CriaDocumentoHTM () {
 		Cabecalho cabecalho= new CabecalhoHTML();
 		cabecalho.setTitulo("Padroes de projeto");
 		cabecalho.setEmpresa("Insituto Federal da Bahia");
@@ -21,7 +21,9 @@ public class CriaDocumentoHTML extends CriadorDocumento{
 		
 		Rodape rodape= new RodapeHTML();
 		rodape.setData(new Date() );
-		
+	}
+	
+	public  String geraDocumentacao() {
 		return cabecalho.getOutput() + corpo.getOutput() + rodape.getOutput();
 	}
 	

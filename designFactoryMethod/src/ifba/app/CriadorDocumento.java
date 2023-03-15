@@ -13,6 +13,9 @@ import ifba.elementos.markdown.CorpoMarkdown;
 import ifba.elementos.markdown.RodapeMarkdown;
 
 public abstract class CriadorDocumento {
+	protected Cabecalho cabecalho;
+	protected Corpo corpo;
+	protected Rodape rodape;
 	
 	public abstract String geraDocumentacao();
 }
