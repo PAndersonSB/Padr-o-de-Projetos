@@ -1,5 +1,5 @@
 package builder;
 
-public class Notebook {
+public class Notebook implements Ferramenta{
 
 }

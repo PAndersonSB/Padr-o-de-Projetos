@@ -1,5 +1,5 @@
 package builder;
 
-public class Computador {
+public class Computador implements Ferramenta{
 
 }
