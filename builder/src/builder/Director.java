@@ -1,15 +1,23 @@
 package builder;
 
 public class Director {
-	private FerramentaBuilder builder;
 	
-	
-	public void createComputador() {
-		
+	public Computador createComputador() {
+		ComputadorBuilder builder = new ComputadorBuilder();
+		builder.setTeclado();
+		builder.setMouse();
+		builder.setProcessador();
+		builder.setFonteDeAlimentacao();
+		return builder.getProduto();
 	}
 	
-	public void createNotebook() {
-		
+	public Notebook createNotebook() {
+		NotebookBuilder builder = new NotebookBuilder();
+		builder.setTeclado();
+		builder.setMouse();
+		builder.setProcessador();
+		builder.setFonteDeAlimentacao();
+		return builder.getProduto();
 	}
 	
 }
