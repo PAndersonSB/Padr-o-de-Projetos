@@ -7,7 +7,7 @@ public class Jogo {
         // Lógica do jogo
         level++;
         checkpoint = "Checkpoint " + level;
-        System.out.println("Playing game. Level: " + level);
+        System.out.println("Jogando Level: " + level);
     }
     
     public Memento save() {
@@ -17,10 +17,10 @@ public class Jogo {
     public void restore(Memento memento) {
         level = memento.getLevel();
         checkpoint = memento.getCheckpoint();
-        System.out.println("Restoring game state. Level: " + level);
+        System.out.println("Restaurando jogo no Level: " + level);
     }
     
     public String toString() {
-        return "Game state - Level: " + level + ", Checkpoint: " + checkpoint;
+        return "Jogo no - Level: " + level + "e Checkpoint: " + checkpoint;
     }
 }
